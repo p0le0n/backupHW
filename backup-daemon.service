@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup Daemon
+
+[Service]
+ExecStart=/home/ramil/Documents/Cpp/Backup/build/Backup
+Restart=always
+
+[Install]
+WantedBy=default.target
