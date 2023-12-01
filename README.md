@@ -1,6 +1,6 @@
 # Backup daemon
 
-## How to build
+## Building:
 ```bash
 mkdir build
 cd ./build
@@ -9,7 +9,7 @@ make
 cd ..
 ```
 
-## How to start daemon
+## Starting daemon:
 ```bash
 cp ./backup-daemon.service /etc/systemd/system/
 cp ./backup.ini /etc/
@@ -18,22 +18,18 @@ systemctl start backup-daemon
 systemctl enable backup-daemon
 ```
 
-## How to pause / continue daemon
+## Pausing or continuing daemon:
 ```bash
 systemctl kill -s SIGTSTP backup-daemon
 systemctl kill -s SIGCONT backup-daemon
 ```
 
-## How to terminate daemon
+## Terminating daemon:
 ```bash
 systemctl stop backup-daemon
 ```
 
-## How to inspect logs
+## Inspecting logs:
 ```bash
 systemctl status backup-daemon 
-```
-or
-```bash
-journalctl -u backup-deamon
 ```

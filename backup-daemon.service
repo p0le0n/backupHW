@@ -2,7 +2,7 @@
 Description=Backup Daemon
 
 [Service]
-ExecStart=/home/ramil/Documents/Cpp/Backup/build/Backup
+ExecStart=/home/leo/Desktop/daemon/build/Backup
 Restart=always
 
 [Install]

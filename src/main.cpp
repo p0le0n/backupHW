@@ -43,7 +43,8 @@ void backup(const mINI::INIStructure& ini)
 
     // Copy files
     std::string dateTime = currentDatetime();
-    std::string outputPath = dst + dateTime;
+    std::string outputPath;
+    outputPath.append(dst).append("/").append(dateTime);
     std::filesystem::copy(src, outputPath, std::filesystem::copy_options::recursive);
 
     std::string log = "Copied " + src + " to " + outputPath;
